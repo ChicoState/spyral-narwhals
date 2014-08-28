@@ -10,15 +10,11 @@ MEET THE TEAM
 --------------
 
 <<<<<<< HEAD
-
-
-
-
-###Garreth Nedved
-	I'm 21 years old and I'm a senior with a major in Computer Science.
-	I'm interested in contributing to an open source project, especially this one
-	since it involves video game development and charity for underprivileged youth.
 =======
+###Garreth Nedved
+
+I'm 21 years old and I'm a senior with a major in Computer Science. I'm interested in contributing to an open source project, especially this one since it involves video game development and charity for underprivileged youth.
+
 ###Gerritt Dorland
 
 A Junior in credit standing, Gerritt Dorland is excited to finally work on a real, substantial project. He expects to leave this class with a better understanding of how to work with a team.
