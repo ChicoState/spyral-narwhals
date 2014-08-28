@@ -1,4 +1,4 @@
-Team Sypral Narwhals
+Team Spyral Narwhals
 ====================
 
 PURPOSE
