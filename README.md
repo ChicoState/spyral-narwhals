@@ -4,7 +4,7 @@ Team Spyral Narwhals
 PURPOSE
 --------
 
-/* changed project from the Spyral Python Library/GameEngine to A survival horror game for the visually imapaired */
+/* changed project from the Spyral Python Library/GameEngine to A survival horror game for the visually impaired */
  
 MEET THE TEAM
 --------------
