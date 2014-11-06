@@ -4,7 +4,7 @@ Team Spyral Narwhals
 PURPOSE
 --------
 
-/* changed project from the Spyral Python Library/GameEngine to A survival horror game for the visually impaired */
+Our project is a video game for desktop PCs that is optimised for blind and severely visually impaired people. This survival-horror game uses directionalized sound to guide the player from a starting point to a goal point.
  
 MEET THE TEAM
 --------------
