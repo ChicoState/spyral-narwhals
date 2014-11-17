@@ -5,11 +5,7 @@ Project("{5D4643D6-2B4B-139B-398B-5447BD570D9E}") = "SoundMaze", "Assembly-CShar
 EndProject
 Project("{5D4643D6-2B4B-139B-398B-5447BD570D9E}") = "SoundMaze", "Assembly-CSharp.csproj", "{19DAA176-6746-FBCD-1E2E-50F7C8D2E0DE}"
 EndProject
-Project("{5D4643D6-2B4B-139B-398B-5447BD570D9E}") = "SoundMaze", "Assembly-CSharp-Editor.csproj", "{4939BC0C-2509-5635-64B7-7DDBBF49A922}"
-EndProject
 Project("{5D4643D6-2B4B-139B-398B-5447BD570D9E}") = "SoundMaze", "Assembly-UnityScript-firstpass.unityproj", "{230DE21E-2DFC-29D2-EBAD-7F7527E2EB24}"
-EndProject
-Project("{5D4643D6-2B4B-139B-398B-5447BD570D9E}") = "SoundMaze", "Assembly-UnityScript.unityproj", "{4778132D-FF86-1960-0ADE-20B29540BD88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,23 +21,15 @@ Global
 		{19DAA176-6746-FBCD-1E2E-50F7C8D2E0DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19DAA176-6746-FBCD-1E2E-50F7C8D2E0DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19DAA176-6746-FBCD-1E2E-50F7C8D2E0DE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4939BC0C-2509-5635-64B7-7DDBBF49A922}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4939BC0C-2509-5635-64B7-7DDBBF49A922}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4939BC0C-2509-5635-64B7-7DDBBF49A922}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4939BC0C-2509-5635-64B7-7DDBBF49A922}.Release|Any CPU.Build.0 = Release|Any CPU
 		{230DE21E-2DFC-29D2-EBAD-7F7527E2EB24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{230DE21E-2DFC-29D2-EBAD-7F7527E2EB24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{230DE21E-2DFC-29D2-EBAD-7F7527E2EB24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{230DE21E-2DFC-29D2-EBAD-7F7527E2EB24}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4778132D-FF86-1960-0ADE-20B29540BD88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4778132D-FF86-1960-0ADE-20B29540BD88}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4778132D-FF86-1960-0ADE-20B29540BD88}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4778132D-FF86-1960-0ADE-20B29540BD88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																								GlobalSection(MonoDevelopProperties) = preSolution
+														GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
