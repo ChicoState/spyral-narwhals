@@ -44,6 +44,7 @@ public class SoundRay : MonoBehaviour
 			Vector3 eastPos = new Vector3(curX + 1, curY, curZ);
 			Vector3 westPos = new Vector3(curX - 1, curY, curZ);
 			Vector3 northPos = new Vector3(curX, curY, curZ + 1);
+
 	
 			/* Check adjacent rooms to see which are previously visted
 			Use Physics.Overlapsphere and place the location at current location
@@ -118,6 +119,10 @@ public class SoundRay : MonoBehaviour
 			{
 				// Move current RayObject to destination
 				rigidbody.velocity = Vector3.forward * speed;
+			}
+			else if(col.gameObject.GetComponentInParent<Room>().north)
+			{
+				Destroy(transform.gameObject);
 			}
 		}
 	}
