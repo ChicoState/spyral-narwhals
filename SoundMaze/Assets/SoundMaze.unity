@@ -1090,7 +1090,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 230224876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13, y: .5, z: 0}
+  m_LocalPosition: {x: 13, y: .5, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 962294908}
@@ -1381,7 +1381,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1b72fad0d08fd6e48a5deddfaa9ccb11, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1b72fad0d08fd6e48a5deddfaa9ccb11, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4570,10 +4570,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be890cf04248a494c908bb426791eedd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previousRooms: 
   speed: 1
   rayDistance: 1
   justSpawned: 1
   soundRay: {fileID: 962294902}
+  directionTraveling: 0
 --- !u!54 &962294904
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7608,7 +7610,7 @@ Transform:
   m_PrefabInternal: {fileID: 293921897}
   m_GameObject: {fileID: 1389890045}
   m_LocalRotation: {x: .5, y: -.5, z: .5, w: .5}
-  m_LocalPosition: {x: 13, y: 0, z: 0}
+  m_LocalPosition: {x: 13, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 548983149}
@@ -10474,10 +10476,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be890cf04248a494c908bb426791eedd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previousRooms: 
   speed: 1
   rayDistance: 1
   justSpawned: 1
   soundRay: {fileID: 100000, guid: 40ebca5ad16ed1f4b898b65132ec3c17, type: 2}
+  directionTraveling: 0
 --- !u!54 &2052491795
 Rigidbody:
   m_ObjectHideFlags: 0
