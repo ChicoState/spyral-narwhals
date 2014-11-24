@@ -7,7 +7,7 @@ public class SoundRay : MonoBehaviour
 	//private int[] previousRooms = new int[25];
 	public List<int> previousRooms = new List<int>();
 	private int currentRoomId;
-	public float speed = 1.0f;
+	public float speed = 0.1f;
 	public float rayDistance = 1.0f;
 	public bool justSpawned = true;
 	public GameObject soundRay;
@@ -110,7 +110,7 @@ public class SoundRay : MonoBehaviour
 			{
 				if(CheckPreviousRooms(northRoomId))
 				{
-
+					Debug.Log ("Previous Room: " + northRoomId);
 					Destroy(gameObject);
 				}
 				else 
@@ -118,6 +118,7 @@ public class SoundRay : MonoBehaviour
 					// Move current RayObject to destination
 					if(directionTraveling == 1)
 					{
+						transform.position = northPos;
 						rigidbody.velocity = Vector3.forward * speed;
 					}
 					else 
@@ -127,7 +128,15 @@ public class SoundRay : MonoBehaviour
 						GameObject northRay = Instantiate(soundRay, northPos, Quaternion.identity) as GameObject;
 						//northRay.transform.parent = transform.parent;
 						northRay.GetComponent<SoundRay>().currentRoomId = currentRoomId;
-						northRay.GetComponent<SoundRay>().AssignPreviousRooms(previousRooms);
+
+						if(previousRooms.Count == 0)
+						{
+							northRay.GetComponent<SoundRay>().AssignPreviousRoom(currentRoomId);
+						}
+						else
+						{
+							northRay.GetComponent<SoundRay>().AssignPreviousRooms(previousRooms);
+						}
 						northRay.GetComponent<SoundRay>().setDirection(1);
 						northRay.rigidbody.velocity = Vector3.forward * speed;
 					}
@@ -138,6 +147,7 @@ public class SoundRay : MonoBehaviour
 			{
 				if(CheckPreviousRooms(eastRoomId))
 				{
+					Debug.Log ("Previous Room: " + eastRoomId);
 					Destroy(gameObject);
 				}
 				else 
@@ -145,16 +155,23 @@ public class SoundRay : MonoBehaviour
 				//Spawn new rayObject and move it to destination
 					if(directionTraveling == 2)
 					{
+						transform.position = eastPos;
 						rigidbody.velocity = Vector3.right * speed;
 					}
 					else
 					{
-	
 						Debug.Log ("eastRay created");
 						GameObject eastRay = Instantiate(soundRay, eastPos, Quaternion.identity) as GameObject;
 						//eastRay.transform.parent = transform.parent;
 						eastRay.GetComponent<SoundRay>().currentRoomId = currentRoomId;
-						eastRay.GetComponent<SoundRay>().AssignPreviousRooms(previousRooms);
+						if(previousRooms.Count == 0)
+						{
+							eastRay.GetComponent<SoundRay>().AssignPreviousRoom(currentRoomId);
+						}
+						else
+						{
+							eastRay.GetComponent<SoundRay>().AssignPreviousRooms(previousRooms);
+						}
 						eastRay.GetComponent<SoundRay>().setDirection(2);
 						eastRay.rigidbody.velocity = Vector3.right * speed;
 					}
@@ -165,6 +182,7 @@ public class SoundRay : MonoBehaviour
 			{
 				if(CheckPreviousRooms(southRoomId))
 				{
+					Debug.Log ("Previous Room: " + southRoomId);
 					Destroy(gameObject);
 				}
 				else 
@@ -172,16 +190,23 @@ public class SoundRay : MonoBehaviour
 					//Spawn new rayObject and move it to destination
 					if(directionTraveling == 3)
 					{
+						transform.position = southPos;
 						rigidbody.velocity = Vector3.back * speed;
 					}
 					else
 					{
-	
 						Debug.Log ("southRay created");
 						GameObject southRay = Instantiate(soundRay, southPos, Quaternion.identity) as GameObject;
 						//southRay.transform.parent = transform.parent;
 						southRay.GetComponent<SoundRay>().currentRoomId = currentRoomId;
-						southRay.GetComponent<SoundRay>().AssignPreviousRooms(previousRooms);
+						if(previousRooms.Count == 0)
+						{
+							southRay.GetComponent<SoundRay>().AssignPreviousRoom(currentRoomId);
+						}
+						else
+						{
+							southRay.GetComponent<SoundRay>().AssignPreviousRooms(previousRooms);
+						}
 						southRay.GetComponent<SoundRay>().setDirection(3);
 						southRay.rigidbody.velocity = Vector3.back * speed;
 					}
@@ -192,6 +217,7 @@ public class SoundRay : MonoBehaviour
 			{
 				if(CheckPreviousRooms(westRoomId))
 				{
+					Debug.Log ("Previous Room: " + westRoomId);
 					Destroy(gameObject);
 				}
 				else
@@ -200,16 +226,23 @@ public class SoundRay : MonoBehaviour
 					//Spawn new rayObject and move it to destination
 					if(directionTraveling == 4)
 					{
+						transform.position = westPos;
 						rigidbody.velocity = Vector3.left * speed;
 					}
 					else
 					{
-	
 						Debug.Log ("westRay created");
 						GameObject westRay = Instantiate(soundRay, westPos, Quaternion.identity) as GameObject;
 						//westRay.transform.parent = transform.parent;
 						westRay.GetComponent<SoundRay>().currentRoomId = currentRoomId;
-						westRay.GetComponent<SoundRay>().AssignPreviousRooms(previousRooms);
+						if(previousRooms.Count == 0)
+						{
+							westRay.GetComponent<SoundRay>().AssignPreviousRoom(currentRoomId);
+						}
+						else
+						{
+							westRay.GetComponent<SoundRay>().AssignPreviousRooms(previousRooms);
+						}
 						westRay.GetComponent<SoundRay>().setDirection(4);
 						westRay.rigidbody.velocity = Vector3.left * speed;
 					}
@@ -218,21 +251,26 @@ public class SoundRay : MonoBehaviour
 
 			if(directionTraveling == 1 && col.gameObject.GetComponentInParent<Room>().north)
 			{
+				Debug.Log ("DestroyingNorthDirection");
 				Destroy(gameObject);
 			}
 			else if(directionTraveling == 2 && col.gameObject.GetComponentInParent<Room>().east)
 			{
+				Debug.Log ("DestroyingEastDirection");
 				Destroy(gameObject);
 			}
 			else if(directionTraveling == 3 && col.gameObject.GetComponentInParent<Room>().south)
 			{
+				Debug.Log ("DestroyingSouthDirection");
 				Destroy(gameObject);
 			}
 			else if(directionTraveling == 4 && col.gameObject.GetComponentInParent<Room>().west)
 			{
+				Debug.Log ("DestroyingWestDirection");
 				Destroy(gameObject);
 			}
 		}
+		//previousRooms.Add (currentRoomId);
 	}
 
 	void OnTriggerStay(Collider col)
@@ -242,7 +280,8 @@ public class SoundRay : MonoBehaviour
 
 	void OnTriggerExit(Collider col)
 	{
-		previousRooms.Add (currentRoomId);
+		Debug.Log("Just Left Room: " + currentRoomId);
+		//previousRooms.Add (currentRoomId);
 		
 	}
 
@@ -267,6 +306,11 @@ public class SoundRay : MonoBehaviour
 		{
 			previousRooms.Add(curList[i]);
 		}
+	}
+
+	public void AssignPreviousRoom(int value)
+	{
+		previousRooms.Add (value);
 	}
 
 	void setDirection(int value)

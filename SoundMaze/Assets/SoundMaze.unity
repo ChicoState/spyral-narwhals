@@ -606,7 +606,7 @@ MonoBehaviour:
   south: 1
   west: 1
   east: 1
-  roomID: 8
+  roomID: 14
 --- !u!1 &105516511
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,7 +799,7 @@ MonoBehaviour:
   south: 0
   west: 0
   east: 1
-  roomID: 0
+  roomID: 12
 --- !u!1001 &186265619
 Prefab:
   m_ObjectHideFlags: 0
@@ -1090,7 +1090,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 230224876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13, y: .5, z: 2}
+  m_LocalPosition: {x: 10, y: .5, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 962294908}
@@ -1147,7 +1147,7 @@ MonoBehaviour:
   south: 1
   west: 0
   east: 1
-  roomID: 8
+  roomID: 21
 --- !u!1 &265003387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,6 +1455,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 1b72fad0d08fd6e48a5deddfaa9ccb11, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b72fad0d08fd6e48a5deddfaa9ccb11, type: 2}
   m_RootGameObject: {fileID: 1389890045}
@@ -1598,6 +1602,10 @@ Prefab:
     - target: {fileID: 400010, guid: a011b428bbfdc7d4eaa39476088cc53b, type: 2}
       propertyPath: m_LocalPosition.y
       value: .0625085309
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a011b428bbfdc7d4eaa39476088cc53b, type: 2}
+      propertyPath: roomID
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a011b428bbfdc7d4eaa39476088cc53b, type: 2}
@@ -2085,7 +2093,7 @@ MonoBehaviour:
   south: 1
   west: 0
   east: 1
-  roomID: 6
+  roomID: 16
 --- !u!1 &402979427
 GameObject:
   m_ObjectHideFlags: 0
@@ -2135,7 +2143,7 @@ MonoBehaviour:
   south: 0
   west: 1
   east: 1
-  roomID: 7
+  roomID: 9
 --- !u!1001 &423347191
 Prefab:
   m_ObjectHideFlags: 0
@@ -2194,6 +2202,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 531c171c3550b0447a83f9100bfd339a, type: 2}
       propertyPath: south
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 531c171c3550b0447a83f9100bfd339a, type: 2}
+      propertyPath: roomID
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 531c171c3550b0447a83f9100bfd339a, type: 2}
@@ -2267,6 +2279,10 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: -.500000119
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 90d9c4e2e45bea4428043773bdd43570, type: 2}
+      propertyPath: roomID
+      value: 21
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90d9c4e2e45bea4428043773bdd43570, type: 2}
   m_RootGameObject: {fileID: 258684017}
@@ -2321,7 +2337,7 @@ MonoBehaviour:
   south: 1
   west: 0
   east: 0
-  roomID: 7
+  roomID: 3
 --- !u!1 &472906759
 GameObject:
   m_ObjectHideFlags: 0
@@ -2371,7 +2387,7 @@ MonoBehaviour:
   south: 0
   west: 1
   east: 0
-  roomID: 6
+  roomID: 15
 --- !u!1 &473347110
 GameObject:
   m_ObjectHideFlags: 0
@@ -2493,7 +2509,7 @@ MonoBehaviour:
   south: 1
   west: 0
   east: 0
-  roomID: 7
+  roomID: 4
 --- !u!1 &505581942
 GameObject:
   m_ObjectHideFlags: 0
@@ -2616,7 +2632,7 @@ MonoBehaviour:
   south: 1
   west: 1
   east: 1
-  roomID: 8
+  roomID: 1
 --- !u!1 &526495122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2739,7 +2755,7 @@ MonoBehaviour:
   south: 1
   west: 1
   east: 0
-  roomID: 8
+  roomID: 19
 --- !u!1 &548983148
 GameObject:
   m_ObjectHideFlags: 0
@@ -3467,6 +3483,10 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: -.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a011b428bbfdc7d4eaa39476088cc53b, type: 2}
+      propertyPath: roomID
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a011b428bbfdc7d4eaa39476088cc53b, type: 2}
   m_RootGameObject: {fileID: 1768596882}
@@ -3740,6 +3760,10 @@ Prefab:
     - target: {fileID: 400010, guid: a011b428bbfdc7d4eaa39476088cc53b, type: 2}
       propertyPath: m_LocalPosition.z
       value: -.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a011b428bbfdc7d4eaa39476088cc53b, type: 2}
+      propertyPath: roomID
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a011b428bbfdc7d4eaa39476088cc53b, type: 2}
@@ -4571,11 +4595,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previousRooms: 
-  speed: 1
+  speed: .100000001
   rayDistance: 1
   justSpawned: 1
-  soundRay: {fileID: 962294902}
-  directionTraveling: 0
+  soundRay: {fileID: 100000, guid: 40ebca5ad16ed1f4b898b65132ec3c17, type: 2}
+  directionTraveling: 1
 --- !u!54 &962294904
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4704,6 +4728,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 90d9c4e2e45bea4428043773bdd43570, type: 2}
       propertyPath: east
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 90d9c4e2e45bea4428043773bdd43570, type: 2}
+      propertyPath: roomID
+      value: 19
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90d9c4e2e45bea4428043773bdd43570, type: 2}
@@ -5999,6 +6027,10 @@ Prefab:
       propertyPath: north
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1b72fad0d08fd6e48a5deddfaa9ccb11, type: 2}
+      propertyPath: roomID
+      value: 18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b72fad0d08fd6e48a5deddfaa9ccb11, type: 2}
   m_RootGameObject: {fileID: 1292211540}
@@ -6485,7 +6517,7 @@ MonoBehaviour:
   south: 0
   west: 1
   east: 1
-  roomID: 7
+  roomID: 13
 --- !u!1 &1243002924
 GameObject:
   m_ObjectHideFlags: 0
@@ -6901,6 +6933,10 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: .0723389536
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a011b428bbfdc7d4eaa39476088cc53b, type: 2}
+      propertyPath: roomID
+      value: 17
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a011b428bbfdc7d4eaa39476088cc53b, type: 2}
   m_RootGameObject: {fileID: 1730771359}
@@ -7026,7 +7062,7 @@ MonoBehaviour:
   south: 0
   west: 0
   east: 0
-  roomID: 0
+  roomID: 18
 --- !u!1 &1307527604
 GameObject:
   m_ObjectHideFlags: 0
@@ -7386,6 +7422,10 @@ Prefab:
       propertyPath: east
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 531c171c3550b0447a83f9100bfd339a, type: 2}
+      propertyPath: roomID
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 531c171c3550b0447a83f9100bfd339a, type: 2}
   m_RootGameObject: {fileID: 397676838}
@@ -7510,6 +7550,10 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: -.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a011b428bbfdc7d4eaa39476088cc53b, type: 2}
+      propertyPath: roomID
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a011b428bbfdc7d4eaa39476088cc53b, type: 2}
   m_RootGameObject: {fileID: 1236147955}
@@ -7602,7 +7646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1389890046
 Transform:
   m_ObjectHideFlags: 0
@@ -7827,6 +7871,10 @@ Prefab:
       propertyPath: m_Name
       value: Room11
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 90d9c4e2e45bea4428043773bdd43570, type: 2}
+      propertyPath: roomID
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90d9c4e2e45bea4428043773bdd43570, type: 2}
   m_RootGameObject: {fileID: 1774922531}
@@ -7886,6 +7934,10 @@ Prefab:
     - target: {fileID: 400012, guid: 90d9c4e2e45bea4428043773bdd43570, type: 2}
       propertyPath: m_LocalPosition.z
       value: -.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 90d9c4e2e45bea4428043773bdd43570, type: 2}
+      propertyPath: roomID
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90d9c4e2e45bea4428043773bdd43570, type: 2}
@@ -8879,6 +8931,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: .25
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 40ebca5ad16ed1f4b898b65132ec3c17, type: 2}
+      propertyPath: speed
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 40ebca5ad16ed1f4b898b65132ec3c17, type: 2}
+      propertyPath: directionTraveling
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40ebca5ad16ed1f4b898b65132ec3c17, type: 2}
   m_RootGameObject: {fileID: 962294902}
@@ -8933,7 +8993,7 @@ MonoBehaviour:
   south: 0
   west: 1
   east: 1
-  roomID: 7
+  roomID: 17
 --- !u!1001 &1745914514
 Prefab:
   m_ObjectHideFlags: 0
@@ -8996,6 +9056,10 @@ Prefab:
     - target: {fileID: 400010, guid: a011b428bbfdc7d4eaa39476088cc53b, type: 2}
       propertyPath: m_LocalPosition.z
       value: -.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a011b428bbfdc7d4eaa39476088cc53b, type: 2}
+      propertyPath: roomID
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a011b428bbfdc7d4eaa39476088cc53b, type: 2}
@@ -9106,7 +9170,7 @@ MonoBehaviour:
   south: 0
   west: 1
   east: 1
-  roomID: 7
+  roomID: 5
 --- !u!4 &1768596884
 Transform:
   m_ObjectHideFlags: 0
@@ -9174,7 +9238,7 @@ MonoBehaviour:
   south: 0
   west: 1
   east: 1
-  roomID: 8
+  roomID: 11
 --- !u!1001 &1783270329
 Prefab:
   m_ObjectHideFlags: 0
@@ -9591,6 +9655,10 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: -.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a011b428bbfdc7d4eaa39476088cc53b, type: 2}
+      propertyPath: roomID
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a011b428bbfdc7d4eaa39476088cc53b, type: 2}
   m_RootGameObject: {fileID: 460189552}
@@ -9874,6 +9942,10 @@ Prefab:
     - target: {fileID: 100004, guid: 1b72fad0d08fd6e48a5deddfaa9ccb11, type: 2}
       propertyPath: m_Name
       value: Room12
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1b72fad0d08fd6e48a5deddfaa9ccb11, type: 2}
+      propertyPath: roomID
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b72fad0d08fd6e48a5deddfaa9ccb11, type: 2}
@@ -10631,6 +10703,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 90d9c4e2e45bea4428043773bdd43570, type: 2}
+      propertyPath: roomID
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90d9c4e2e45bea4428043773bdd43570, type: 2}
   m_RootGameObject: {fileID: 521082181}
@@ -10685,7 +10761,7 @@ MonoBehaviour:
   south: 1
   west: 0
   east: 0
-  roomID: 7
+  roomID: 20
 --- !u!1 &2061055750
 GameObject:
   m_ObjectHideFlags: 0
