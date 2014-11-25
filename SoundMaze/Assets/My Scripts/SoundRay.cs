@@ -9,9 +9,12 @@ public class SoundRay : MonoBehaviour
 	private int currentRoomId;
 	public float speed = 0.1f;
 	public float rayDistance = 1.0f;
+	public float raySpawn = 0.25f;
+	public float rayCastSpawn = 0.5f;
 	public bool justSpawned = true;
 	public GameObject soundRay;
 	public int directionTraveling = 0;
+	public int southRoomId, northRoomId, eastRoomId, westRoomId;
 
 
 	// Use this for initialization
@@ -35,33 +38,40 @@ public class SoundRay : MonoBehaviour
 	{
 		if(col.gameObject.name == "Fill")
 		{
+			Vector3 col_pos = col.transform.position;
 			rigidbody.velocity = Vector3.forward * 0;
 			currentRoomId = col.gameObject.GetComponentInParent<Room>().roomID;
 
-			float curX = transform.position.x;
-			float curY = transform.position.y;
-			float curZ = transform.position.z;
+			float curX = col_pos.x;
+			float curY = col_pos.y;
+			float curZ = col_pos.z;
 	
-			int southRoomId = 0;
-			int northRoomId = 0;
-			int eastRoomId = 0;
-			int westRoomId = 0;
+			southRoomId = 0;
+			northRoomId = 0;
+			eastRoomId = 0;
+			westRoomId = 0;
 	
-			Vector3 southPos = new Vector3(curX, curY, curZ - 0.5f);
-			Vector3 eastPos = new Vector3(curX + 0.5f, curY, curZ);
-			Vector3 westPos = new Vector3(curX - 0.5f, curY, curZ);
-			Vector3 northPos = new Vector3(curX, curY, curZ + 0.5f);
+			Vector3 southPos = new Vector3(curX, curY, curZ - raySpawn);
+			Vector3 eastPos = new Vector3(curX + raySpawn, curY, curZ);
+			Vector3 westPos = new Vector3(curX - raySpawn, curY, curZ);
+			Vector3 northPos = new Vector3(curX, curY, curZ + raySpawn);
 
+			Vector3 southPosRay = new Vector3(curX, curY, curZ - rayCastSpawn);
+			Vector3 eastPosRay = new Vector3(curX + rayCastSpawn, curY, curZ);
+			Vector3 westPosRay = new Vector3(curX - rayCastSpawn, curY, curZ);
+			Vector3 northPosRay = new Vector3(curX, curY, curZ + rayCastSpawn);
 	
 			/* Check adjacent rooms to see which are previously visted
 			Use Physics.Overlapsphere and place the location at current location
 			minus or plus whatever direction we are checking aka South, East, West. */
+
+			// GO BACK TO OVERLAPSPHERE, because that wasn't the problem. And raycasting won't work since it can't go through our player or monster objects.
 			
 			RaycastHit southHit, eastHit, westHit, northHit;
 
 			if(!col.gameObject.GetComponentInParent<Room>().south)
 			{
-				if(Physics.Raycast(transform.position, Vector3.back, out southHit, rayDistance)) //south
+				if(Physics.Raycast(southPosRay, Vector3.back, out southHit, rayDistance)) //south
 				{
 					if(southHit.collider.name == "Fill")
 					{
@@ -72,7 +82,7 @@ public class SoundRay : MonoBehaviour
 
 			if(!col.gameObject.GetComponentInParent<Room>().east)
 			{
-				if(Physics.Raycast(transform.position, Vector3.right, out eastHit, rayDistance)) //east
+				if(Physics.Raycast(eastPosRay, Vector3.right, out eastHit, rayDistance)) //east
 				{
 					if(eastHit.collider.name == "Fill")
 					{
@@ -83,7 +93,7 @@ public class SoundRay : MonoBehaviour
 
 			if(!col.gameObject.GetComponentInParent<Room>().west)
 			{
-				if(Physics.Raycast(transform.position, Vector3.left, out westHit, rayDistance)) //west
+				if(Physics.Raycast(westPosRay, Vector3.left, out westHit, rayDistance)) //west
 				{
 					if(westHit.collider.name == "Fill")
 					{
@@ -94,7 +104,7 @@ public class SoundRay : MonoBehaviour
 
 			if(!col.gameObject.GetComponentInParent<Room>().north)
 			{
-				if(Physics.Raycast(transform.position, Vector3.back, out northHit, rayDistance))
+				if(Physics.Raycast(northPosRay, Vector3.back, out northHit, rayDistance))
 				{
 					if(northHit.collider.name == "Fill")
 					{
@@ -281,7 +291,7 @@ public class SoundRay : MonoBehaviour
 	void OnTriggerExit(Collider col)
 	{
 		Debug.Log("Just Left Room: " + currentRoomId);
-		//previousRooms.Add (currentRoomId);
+		previousRooms.Add (currentRoomId);
 		
 	}
 
