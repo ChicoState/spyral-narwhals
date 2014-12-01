@@ -28,5 +28,5 @@ A senior majoring in Computer Engineering. I'm excited about working in unity3d 
 
 ###Ryan Mann
 
-A junior majoring in Computer Science.  Ryan Mann is hoping to improve his knowledge of programming by working in groups (like people do in the workforce) and by trying out python, a language he has never used before.
+A junior majoring in Computer Science.  Ryan Mann is hoping to improve his knowledge of programming by working in groups (like people do in the workforce) and by trying out C#, a language he has never used before.
 
