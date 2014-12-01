@@ -3161,7 +3161,7 @@ GameObject:
   - 54: {fileID: 576299932}
   - 114: {fileID: 576299933}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4978,7 +4978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previousRooms: 
-  speed: .100000001
+  speed: .5
   rayDistance: 1
   raySpawn: .25
   rayCastSpawn: .5
@@ -9703,7 +9703,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 40ebca5ad16ed1f4b898b65132ec3c17, type: 2}
       propertyPath: speed
-      value: .100000001
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 40ebca5ad16ed1f4b898b65132ec3c17, type: 2}
       propertyPath: directionTraveling

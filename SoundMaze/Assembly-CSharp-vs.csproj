@@ -112,7 +112,6 @@
      <None Include="Assets\UnityTestTools\Examples\IntegrationTestsFrameworkExamples\AngryBotsTests\Shaders\Fx\ParticleBlend.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>C:/GitHub/spyral-narwhals/SoundMaze/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
- <HintPath>C:/Users/Jeremy/Documents/GitHub/spyral-narwhals/SoundMaze/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

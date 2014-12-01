@@ -16,6 +16,8 @@ public class SoundRay : MonoBehaviour
 	public int directionTraveling = 0;
 	public int southRoomId, northRoomId, eastRoomId, westRoomId;
 	public int layerMask = 1 << 8;
+	private int distanceTraveled = 0;
+	//private int curRayOrigin =
 
 
 	// Use this for initialization
