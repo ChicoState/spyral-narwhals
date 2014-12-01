@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
 		if(Input.GetKey (KeyCode.W))
 		{
 			//transform.position = Vector3.Lerp(startMarker.position, endMarker.position, fractionTravel);
-			Vector3 temp = new Vector3(0,0,0);	
+			//Vector3 temp = new Vector3(0,0,0);	
 
 			switch(directionFacing)
 			{
