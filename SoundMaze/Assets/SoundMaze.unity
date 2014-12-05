@@ -1121,7 +1121,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 230224876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: .5, z: 2}
+  m_LocalPosition: {x: 7, y: .5, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 962294908}
@@ -3213,7 +3213,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 576299927}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7, y: .5, z: -1}
+  m_LocalPosition: {x: 7, y: .5, z: 0}
   m_LocalScale: {x: .25, y: .25, z: .25}
   m_Children:
   - {fileID: 1089896574}
@@ -3715,6 +3715,10 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: -.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a011b428bbfdc7d4eaa39476088cc53b, type: 2}
+      propertyPath: roomID
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a011b428bbfdc7d4eaa39476088cc53b, type: 2}
   m_RootGameObject: {fileID: 635144233}
@@ -3769,7 +3773,7 @@ MonoBehaviour:
   south: 0
   west: 1
   east: 1
-  roomID: 17
+  roomID: 7
 --- !u!1 &654749680
 GameObject:
   m_ObjectHideFlags: 0
@@ -4982,7 +4986,7 @@ MonoBehaviour:
   rayDistance: 1
   raySpawn: .25
   rayCastSpawn: .5
-  justSpawned: 1
+  original: 1
   soundRay: {fileID: 962294902}
   directionTraveling: 1
   southRoomId: 0
@@ -4990,6 +4994,7 @@ MonoBehaviour:
   eastRoomId: 0
   westRoomId: 0
   layerMask: 256
+  audioObj: {fileID: 100000, guid: 2b549ddbd85b8da48ad8996cb965b913, type: 2}
 --- !u!54 &962294904
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5591,7 +5596,7 @@ MonoBehaviour:
   south: 0
   west: 1
   east: 1
-  roomID: 1
+  roomID: 8
 --- !u!1 &1042787400
 GameObject:
   m_ObjectHideFlags: 0
@@ -9721,6 +9726,10 @@ Prefab:
       propertyPath: temp
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 40ebca5ad16ed1f4b898b65132ec3c17, type: 2}
+      propertyPath: audioObj
+      value: 
+      objectReference: {fileID: 100000, guid: 2b549ddbd85b8da48ad8996cb965b913, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40ebca5ad16ed1f4b898b65132ec3c17, type: 2}
   m_RootGameObject: {fileID: 962294902}
@@ -10124,6 +10133,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 90d9c4e2e45bea4428043773bdd43570, type: 2}
       propertyPath: north
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 90d9c4e2e45bea4428043773bdd43570, type: 2}
+      propertyPath: roomID
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90d9c4e2e45bea4428043773bdd43570, type: 2}
@@ -11411,7 +11424,7 @@ MonoBehaviour:
   rayDistance: 1
   raySpawn: .25
   rayCastSpawn: .5
-  justSpawned: 1
+  original: 1
   soundRay: {fileID: 100000, guid: 40ebca5ad16ed1f4b898b65132ec3c17, type: 2}
   directionTraveling: 0
   southRoomId: 0
@@ -11419,6 +11432,7 @@ MonoBehaviour:
   eastRoomId: 0
   westRoomId: 0
   layerMask: 256
+  audioObj: {fileID: 0}
 --- !u!54 &2052491795
 Rigidbody:
   m_ObjectHideFlags: 0
