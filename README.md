@@ -8,7 +8,7 @@ Our project is a video game for desktop PCs that is optimised for blind and seve
  
 ROAD MAP
 --------
-[Scripts](https://github.com/CSUChicoSoftwareEngineering/spyral-narwhals/tree/revisions/SoundMaze/Assets/My%20Scripts)
+[Scripts](https://github.com/CSUChicoSoftwareEngineering/spyral-narwhals/tree/master/SoundMaze/Assets/My%20Scripts)
 
  
 MEET THE TEAM
