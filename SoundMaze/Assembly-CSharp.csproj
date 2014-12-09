@@ -46,9 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\My Scripts\Monster.cs" />
      <Compile Include="Assets\My Scripts\Player.cs" />
      <Compile Include="Assets\My Scripts\Room.cs" />
+     <Compile Include="Assets\My Scripts\SoundHolder.cs" />
      <Compile Include="Assets\My Scripts\SoundRay.cs" />
+     <Compile Include="Assets\My Scripts\fileread.cs" />
      <Compile Include="Assets\UnityTestTools\Assertions\AssertionComponent.cs" />
      <Compile Include="Assets\UnityTestTools\Assertions\AssertionException.cs" />
      <Compile Include="Assets\UnityTestTools\Assertions\Assertions.cs" />

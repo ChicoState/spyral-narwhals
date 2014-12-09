@@ -40,27 +40,11 @@ public class Player : MonoBehaviour
 
 		if(Input.GetKey (KeyCode.W))
 		{
-			//transform.position = Vector3.Lerp(startMarker.position, endMarker.position, fractionTravel);
-			//Vector3 temp = new Vector3(0,0,0);	
-
 			switch(directionFacing)
 			{
 				case(1):
 					if(!currentRoom.GetComponent<Room>().north)
 					{
-						/*temp.x = transform.position.x;
-						temp.y = transform.position.y;
-						temp.z = transform.position.z + 1.0f;
-
-						float journeyLength = Vector3.Distance(transform.position, temp);
-						float maxDistance = Time.deltaTime * speed;
-	
-						Debug.Log ("New Z: " + transform.position + Vector3.forward);
-						Debug.Log ("MaxDistance: " + maxDistance);
-						Debug.Log ("Length: " + journeyLength);
-	
-						//transform.position = Vector3.Lerp(transform.position, temp, Time.time * speed / journeyLength);
-						//transform.position = Vector3.MoveTowards(transform.position, transform.position + Vector3.forward, journeyLength);*/
 						rigidbody.velocity = Vector3.forward * speed;
 						moving = true;
 					}
@@ -69,12 +53,6 @@ public class Player : MonoBehaviour
 				case(2):
 					if(!currentRoom.GetComponent<Room>().east)
 					{
-						/*temp.x = transform.position.x + 1.0f;
-						temp.y = transform.position.y;
-						temp.z = transform.position.z;
-						
-						float journeyLength = Vector3.Distance(transform.position, temp);
-						//transform.position = Vector3.MoveTowards(transform.position, transform.position + Vector3.right, journeyLength);*/
 						rigidbody.velocity = Vector3.right * speed;
 						moving = true;
 					}
@@ -83,12 +61,6 @@ public class Player : MonoBehaviour
 				case(3):
 					if(!currentRoom.GetComponent<Room>().south)
 					{
-						/*temp.x = transform.position.x;
-						temp.y = transform.position.y;
-						temp.z = transform.position.z - 1.0f;
-						
-						float journeyLength = Vector3.Distance(transform.position, temp);
-						//transform.position = Vector3.MoveTowards(transform.position, transform.position - Vector3.forward, journeyLength);*/
 						rigidbody.velocity = Vector3.back * speed;
 						moving = true;
 					}
@@ -97,12 +69,6 @@ public class Player : MonoBehaviour
 				case(4):
 					if(!currentRoom.GetComponent<Room>().west)
 					{
-						/*temp.x = transform.position.x - 1.0f;
-						temp.y = transform.position.y;
-						temp.z = transform.position.z;
-						
-						float journeyLength = Vector3.Distance(transform.position, temp);
-						//transform.position = Vector3.MoveTowards(transform.position, transform.position - Vector3.right, journeyLength);*/
 						rigidbody.velocity = Vector3.left * speed;
 						moving = true;
 					}
@@ -173,18 +139,12 @@ public class Player : MonoBehaviour
 
 	void OnTriggerStay(Collider col)
 	{
-		/*if(col.gameObject.name == "Fill")
-		{
-			currentRoomID = col.transform.parent.GetComponent<Room>().roomID;
-			currentRoom = col.transform.parent.gameObject;
-			Debug.Log ("RoomID: " + currentRoomID);
-		}*/
 		
 	}
 
 	void OnTriggerExist(Collider col)
 	{
 
-		Debug.Log ("Exiting");
+		//Debug.Log ("Exiting");
 	}
 }
