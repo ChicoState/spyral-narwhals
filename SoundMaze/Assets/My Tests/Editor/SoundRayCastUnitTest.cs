@@ -7,7 +7,6 @@ namespace UnityTest
 {
 	public class SoundRayCastingTests
 	{
-
 		[Test]
 		public void checkPreviousRoomIfVisted ()
 		{
