@@ -3,25 +3,28 @@ using System.Text;
 using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
-	
+
 public class fileread : MonoBehaviour
 {
 	public GameObject myMonster;
-
-
+	private string base_path = @"C:\GitHub\spyral-narwhals\SoundMaze\Assets\My Scripts\Monster Files\";
+	
 	void Start()
 	{
 		//Pass list to myMonster
-		List<int> startlist = GetMonsterID ("monster1.txt");
-		
-		for (int i = 0; i < startlist.Count; i++)
+
+		List<int> startlist = GetMonsterPath (base_path + "monster1.txt");
+
+		/*for (int i = 0; i < startlist.Count; i++)
 		{//iterate through the entire list and print it to console
-			Console.WriteLine(startlist[i]);
-		}
+			Debug.Log(startlist[i]);
+		}*/
+
+		myMonster.GetComponent<Monster>().AssignPath(startlist);
 		
-		Console.WriteLine ("\n");
+		//Debug.Log ("\n");
 	}
-		
+	
 	//make a function that takes in a string (monster ID), it uses this to open a file
 	//read the file until the EOF, while putting each element into an array
 	void update()
@@ -33,15 +36,15 @@ public class fileread : MonoBehaviour
 
 		for (int i = 0; i < startlist.Count; i++)
 		{//iterate through the entire list and print it to console
-			Console.WriteLine(startlist[i]);
+			Debug.Log(startlist[i]);
 		}
 
-		Console.WriteLine ("\n");*/
+		Debug.Log ("\n");*/
 		
 	}
-
-
-	public List<int> GetMonsterID(string name)
+	
+	
+	public List<int> GetMonsterPath(string name)
 	{
 		List<int> list = new List<int>();
 		try
@@ -70,7 +73,7 @@ public class fileread : MonoBehaviour
 		}
 		catch (Exception e)
 		{
-			Console.WriteLine ("{0}\n", e.Message);
+			Debug.Log (e.Message);
 			return list; //DO NOT DO THIS
 		}
 	}

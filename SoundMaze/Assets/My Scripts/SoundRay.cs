@@ -7,11 +7,12 @@ public class SoundRay : MonoBehaviour
 	//private int[] previousRooms = new int[25];
 	public List<int> previousRooms = new List<int>();
 	private int currentRoomId;
-	public float speed = 0.1f;
+	public float speed = 10.0f;
 	public float rayDistance = 1.0f;
 	public float raySpawn = 0.25f;
 	public float rayCastSpawn = 0.5f;
 	public bool original = true;
+	public bool triggerEnabled = false;
 	public GameObject soundRay;
 	public int directionTraveling = 0;
 	public int southRoomId, northRoomId, eastRoomId, westRoomId;
@@ -23,7 +24,8 @@ public class SoundRay : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		audioObj = transform.parent.FindChild("SoundSource").gameObject;
+		//audioObj = transform.parent.FindChild("SoundSource").gameObject;
+		// Being taken care of by SoundHolder parent
 	}
 	
 	// Update is called once per frame
@@ -36,6 +38,8 @@ public class SoundRay : MonoBehaviour
 	{
 		if(col.gameObject.name == "Fill")
 		{
+			// While loop to loop until trigger enabled is set to true?
+			
 			Vector3 col_pos = col.transform.position;
 			rigidbody.velocity = Vector3.forward * 0;
 			currentRoomId = col.gameObject.GetComponentInParent<Room>().roomID;
@@ -115,6 +119,7 @@ public class SoundRay : MonoBehaviour
 			//Checking Previous Rooms
 
 			// Check all available directions and if they are previous rooms we have already visited
+			//Debug.Log ("Need Direction");
 			
 			if (!col.gameObject.GetComponentInParent<Room>().north)
 			{
@@ -136,7 +141,7 @@ public class SoundRay : MonoBehaviour
 				else  if (!CheckPreviousRooms(northRoomId))
 				{
 
-					//Debug.Log("northRay created");
+					//Debug.Log("northRay created at: " + northPos);
 					GameObject northRay = Instantiate(soundRay, northPos, Quaternion.identity) as GameObject;
 					//northRay.GetComponent<SoundRay>().original = false;
 
@@ -183,7 +188,7 @@ public class SoundRay : MonoBehaviour
 				}
 				else if (!CheckPreviousRooms(eastRoomId))
 				{
-					//Debug.Log ("eastRay created");
+					//Debug.Log ("eastRay created at: " + eastPos);
 					GameObject eastRay = Instantiate(soundRay, eastPos, Quaternion.identity) as GameObject;
 					//eastRay.GetComponent<SoundRay>().original = false;
 					eastRay.transform.parent = transform.parent;
@@ -225,7 +230,7 @@ public class SoundRay : MonoBehaviour
 				}
 				else if (!CheckPreviousRooms(southRoomId))
 				{
-					//Debug.Log ("southRay created");
+					//Debug.Log ("southRay created at: " + southPos);
 					GameObject southRay = Instantiate(soundRay, southPos, Quaternion.identity) as GameObject;
 					//southRay.GetComponent<SoundRay>().original = false;
 					southRay.transform.parent = transform.parent;
@@ -267,7 +272,7 @@ public class SoundRay : MonoBehaviour
 				}
 				else if (!CheckPreviousRooms(westRoomId))
 				{
-					//Debug.Log ("westRay created");
+					//Debug.Log ("westRay created at: " + westPos);
 					GameObject westRay = Instantiate(soundRay, westPos, Quaternion.identity) as GameObject;
 					//westRay.GetComponent<SoundRay>().original = false;
 					westRay.transform.parent = transform.parent;
@@ -322,7 +327,7 @@ public class SoundRay : MonoBehaviour
 				string tempOriginal = "Room" + previousRooms[0];
 				GameObject tempobj = GameObject.Find(tempOriginal);
 				audioObj.transform.position = tempobj.transform.position;
-				audioObj.SetActive(true);
+				audioObj.GetComponent<AudioSource>().enabled = true;
 				//GameObject tempAudioSource = Instantiate(audioObj, tempobj.transform.position, Quaternion.identity) as GameObject;
 			}
 			else
@@ -333,7 +338,7 @@ public class SoundRay : MonoBehaviour
 				GameObject tempgo = GameObject.Find(temp);
 				//GameObject tempAudio = Instantiate(audioObj, tempgo.transform.position, Quaternion.identity) as GameObject;
 				audioObj.transform.position = tempgo.transform.position;
-				audioObj.SetActive(true);
+				audioObj.GetComponent<AudioSource>().enabled = true;
 				Destroy(gameObject);
 			}
 		}

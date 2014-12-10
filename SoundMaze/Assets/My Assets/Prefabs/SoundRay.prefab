@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .5, y: .5, z: .5}
+  m_LocalScale: {x: .25, y: .25, z: .25}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -86,11 +86,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previousRooms: 
-  speed: .100000001
+  speed: 10
   rayDistance: 1
   raySpawn: .25
   rayCastSpawn: .5
-  justSpawned: 1
+  original: 1
+  triggerEnabled: 0
   soundRay: {fileID: 100000}
   directionTraveling: 0
   southRoomId: 0
@@ -98,6 +99,7 @@ MonoBehaviour:
   eastRoomId: 0
   westRoomId: 0
   layerMask: 256
+  audioObj: {fileID: 0}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
