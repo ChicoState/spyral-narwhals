@@ -71,5 +71,33 @@ namespace UnityTest
 				Assert.AreSame(tempgo,currentRoom);
 			}
 		}
+		[Test]
+		public void directionSettingTest()
+		{
+			int d = 2;
+			//public int testDirection = 1;
+			var soundRay = Substitute.For<SoundRay> ();
+			soundRay.directionTraveling = d;
+			int direction = soundRay.directionTraveling;
+			Assert.That (direction == 2);
+		}
+		[Test]
+		public void speedSettingTest()
+		{
+			float s = 10.0f;
+			var soundRay = Substitute.For<SoundRay> ();
+			soundRay.speed = s;
+			float speed = soundRay.speed;
+			Assert.That (speed == 10.0f);
+		}
+		//public void ()
+		/*public void soundRayClassTest()
+		{
+			//var soundRay = Substitute.For<SoundRay> ();
+			var soundRay = Substitute.For<SoundRay> ();
+			soundRay.transform.position = new Vector3 (7, 0, 1);
+			//Triggers trigger causing class to run
+			Assert.That (!col.gameObject.GetComponentInParent<Room>().south)
+		}*/
 	}
 }
