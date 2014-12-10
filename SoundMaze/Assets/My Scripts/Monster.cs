@@ -52,7 +52,10 @@ public class Monster : MonoBehaviour
 				{
 					pathReverse = true;
 				}
-				nextIndex++;
+				else
+				{
+					nextIndex++;
+				}
 			}
 			else if(pathReverse)
 			{
@@ -65,7 +68,10 @@ public class Monster : MonoBehaviour
 				{
 					pathReverse = false;
 				}
-				nextIndex--;
+				else
+				{
+					nextIndex--;
+				}
 			}
 		}
 	}

@@ -129,12 +129,24 @@ public class Player : MonoBehaviour
 	{
 		if(col.gameObject.name == "Fill")
 		{
+			//Debug.Log("Collision");
 			currentRoomID = col.transform.parent.GetComponent<Room>().roomID;
 			currentRoom = col.transform.parent.gameObject;
 			Debug.Log ("RoomID: " + currentRoomID);
 			rigidbody.velocity = Vector3.up * 0;
 			moving = false;
+
+			if(col.transform.parent.GetComponent<Room>().exit)
+			{
+				Debug.LogWarning("EXIT HIT");
+				Application.LoadLevel("LevelComplete");
+			}
+
 		}
+		/*else if(col.gameObject.name == "Exit")
+		{
+			Application.LoadLevel("LevelComplete");
+		}*/
 	}
 
 	void OnTriggerStay(Collider col)
