@@ -90,6 +90,10 @@ public class Monster : MonoBehaviour
 			//Debug.Log ("Monster RoomID: " + currentRoomID);
 			//rigidbody.velocity = Vector3.up * 0;
 		}
+		else if(col.name == "Player")
+		{
+			Application.LoadLevel("LevelFailed");
+		}
 	}
 
 	public GameObject get_monster_room()

@@ -9,6 +9,8 @@ EditorBuildSettings:
     path: Assets/SoundMaze.unity
   - enabled: 1
     path: Assets/LevelComplete.unity
+  - enabled: 1
+    path: Assets/LevelFailed.unity
   - enabled: 0
     path: Assets/LevelComplete.unity
   - enabled: 0
