@@ -14,7 +14,7 @@ namespace UnityTest
 			var room = Substitute.For<Room> ();
 			play.directionFacing = 1;
 
-			GameObject currentRoom = GameObject.Find("Room1");
+			GameObject currentRoom = GameObject.Find("Room12");
 
 			
 			if(!currentRoom.GetComponent<Room>().north && currentRoom.GetComponent<Room>().east &&
@@ -56,11 +56,11 @@ namespace UnityTest
 			var room = Substitute.For<Room> ();
 			play.directionFacing = 3;
 
-			GameObject currentRoom = GameObject.Find("Room11");
+			GameObject currentRoom = GameObject.Find("Room22");
 			
 			
-			if(!currentRoom.GetComponent<Room>().north && currentRoom.GetComponent<Room>().east &&
-			   !currentRoom.GetComponent<Room>().south && !currentRoom.GetComponent<Room>().west)
+			if(currentRoom.GetComponent<Room>().north && currentRoom.GetComponent<Room>().east &&
+			   !currentRoom.GetComponent<Room>().south && currentRoom.GetComponent<Room>().west)
 			{
 				Assert.True(!room.south && (play.directionFacing == 3));
 			}
@@ -77,11 +77,11 @@ namespace UnityTest
 			var room = Substitute.For<Room> ();
 			play.directionFacing = 4;
 			
-			GameObject currentRoom = GameObject.Find("Room11");
+			GameObject currentRoom = GameObject.Find("Room3");
 			
 			
-			if(!currentRoom.GetComponent<Room>().north && currentRoom.GetComponent<Room>().east &&
-			   !currentRoom.GetComponent<Room>().south && !currentRoom.GetComponent<Room>().west)
+			if(currentRoom.GetComponent<Room>().north && !currentRoom.GetComponent<Room>().east &&
+			   currentRoom.GetComponent<Room>().south && !currentRoom.GetComponent<Room>().west)
 			{
 				Assert.True(!room.west && (play.directionFacing == 4));
 			}

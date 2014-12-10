@@ -48,28 +48,10 @@ namespace UnityTest
 		{
 			var room = Substitute.For<Room> ();
 			var play = Substitute.For<Player> ();
-			GameObject currentRoom = GameObject.Find("Room15");
+			GameObject currentRoom = GameObject.Find("Room22");
 			
 			if(currentRoom.GetComponent<Room>().north && currentRoom.GetComponent<Room>().east &&
 			   !currentRoom.GetComponent<Room>().south && currentRoom.GetComponent<Room>().west)
-			{
-				Assert.Pass ();
-			}
-			else
-			{
-				Assert.Fail ();
-			}
-		}
-
-		[Test]
-		public void threeway()
-		{
-			var room = Substitute.For<Room> ();
-			var play = Substitute.For<Player> ();
-			GameObject currentRoom = GameObject.Find("Room11");
-			
-			if(!currentRoom.GetComponent<Room>().north && currentRoom.GetComponent<Room>().east &&
-			   !currentRoom.GetComponent<Room>().south && !currentRoom.GetComponent<Room>().west)
 			{
 				Assert.Pass ();
 			}
@@ -84,7 +66,7 @@ namespace UnityTest
 		{
 			var room = Substitute.For<Room> ();
 			var play = Substitute.For<Player> ();
-			GameObject currentRoom = GameObject.Find("Corner");
+			GameObject currentRoom = GameObject.Find("Room21");
 			
 			if(!currentRoom.GetComponent<Room>().north && !currentRoom.GetComponent<Room>().east &&
 			   currentRoom.GetComponent<Room>().south && currentRoom.GetComponent<Room>().west)
