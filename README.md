@@ -11,6 +11,9 @@ ROAD MAP
 [Scripts](https://github.com/CSUChicoSoftwareEngineering/spyral-narwhals/tree/master/SoundMaze/Assets/My%20Scripts)
 
 [Tests](https://github.com/CSUChicoSoftwareEngineering/spyral-narwhals/tree/master/SoundMaze/Assets/My%20Tests/Editor)
+
+[More Tests](https://github.com/CSUChicoSoftwareEngineering/spyral-narwhals/tree/master/SoundMaze/Assets/UnityTestTools/UnitTesting/Editor)
+
 -More tests can be found in the testlevel under integration tests.
 
  
