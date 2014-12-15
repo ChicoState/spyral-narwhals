@@ -1,6 +1,7 @@
 Engine:
 =======
-	- Bug: Sometimes the sound object will not follow a monster around a corner. Clearly due to a missed test case - 		open main game scene and allow the monster to cycle through to level to observe this error.
+	- Bug: Sometimes the sound object will not follow a monster around a corner. Clearly due to a missed test case.
+	  open main game scene and allow the monster to cycle through to level to observe this error.
 
 	- TODO: Add Raycasting for exit sound object.
 	- Streamline Level Creation - Make a copied room object rename/relabel itself
