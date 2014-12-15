@@ -5,7 +5,7 @@ public class ExitHolder : MonoBehaviour
 {
 
 	public int rayTimer;
-	public int rayRate = 50;
+	public int rayRate = 250;
 	public GameObject soundRay;
 	public GameObject exitRoom;
 	public GameObject soundSource;

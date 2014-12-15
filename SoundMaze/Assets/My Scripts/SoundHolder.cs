@@ -6,6 +6,7 @@ public class SoundHolder : MonoBehaviour
 	
 	public int rayTimer;
 	public int monsterTimer;
+	public int rayRate = 50;
 	private GameObject monsterChild;
 	public GameObject soundRay;
 
@@ -31,7 +32,7 @@ public class SoundHolder : MonoBehaviour
 			monsterChild.GetComponent<Monster>().MoveMonster();
 		}
 		
-		if(rayTimer == 50)
+		if(rayTimer == rayRate)
 		{
 			rayTimer = 0;
 			//Debug.Log("TICK RAY");
