@@ -5,12 +5,19 @@ Engine:
 	- TODO: Add Raycasting for exit sound object.
 	- Streamline Level Creation - Make a copied room object rename/relabel itself
 
-GAME:
-=====
+GAME (Top Priority):
+====================
 
 	- Add the sound effects!
 	- Add Ambient noise.
 	- Create swiping gestures to allow easy mobile device controls.
+	- Port to Mobile
 	- Get a good voice actor to do some work.
 	- Get a visually impaired person to test and offer advice.
 	- DO A LOT OF QA TESTING
+
+
+CONTACT:
+========
+
+For information/help, contact Gerritt Dorland: gerrittdorland@gmail.com
