@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
 
 
 
-		if(Input.GetKey (KeyCode.W))
+		if(Input.GetKey (KeyCode.W)) // If Player presses W and direction is valid, move them forward one space
 		{
 			switch(directionFacing)
 			{
@@ -125,6 +125,7 @@ public class Player : MonoBehaviour
 		
 	}
 
+/* Function that gets called whenever the Player collides with anything */
 	void OnTriggerEnter(Collider col)
 	{
 		if(col.gameObject.name == "Fill")
@@ -132,21 +133,14 @@ public class Player : MonoBehaviour
 			//Debug.Log("Collision");
 			currentRoomID = col.transform.parent.GetComponent<Room>().roomID;
 			currentRoom = col.transform.parent.gameObject;
-			Debug.Log ("RoomID: " + currentRoomID);
 			rigidbody.velocity = Vector3.up * 0;
+			transform.position = col.transform.position;
 			moving = false;
-
-			if(col.transform.parent.GetComponent<Room>().exit)
-			{
-				Debug.LogWarning("EXIT HIT");
-				Application.LoadLevel("LevelComplete");
-			}
-
 		}
-		/*else if(col.gameObject.name == "Exit")
+		else if(col.gameObject.name == "Exit")
 		{
 			Application.LoadLevel("LevelComplete");
-		}*/
+		}
 	}
 
 	void OnTriggerStay(Collider col)

@@ -17,7 +17,7 @@ public class SoundRay : MonoBehaviour
 	public int directionTraveling = 0;
 	public int southRoomId, northRoomId, eastRoomId, westRoomId;
 	public int layerMask = 1 << 8;
-	private int distanceTraveled = 0;
+	private float audioDenominator = 1.0f;
 	public GameObject audioObj;
 
 
@@ -327,17 +327,19 @@ public class SoundRay : MonoBehaviour
 				string tempOriginal = "Room" + previousRooms[0];
 				GameObject tempobj = GameObject.Find(tempOriginal);
 				audioObj.transform.position = tempobj.transform.position;
+				audioObj.GetComponent<AudioSource>().audio.volume = 1.0f;
 				audioObj.GetComponent<AudioSource>().enabled = true;
 				//GameObject tempAudioSource = Instantiate(audioObj, tempobj.transform.position, Quaternion.identity) as GameObject;
 			}
 			else
 			{
 				string temp = "Room" + previousRooms[previousRooms.Count-2];
-				Debug.Log(temp);
-				Debug.Log (previousRooms[previousRooms.Count - 1]);
 				GameObject tempgo = GameObject.Find(temp);
 				//GameObject tempAudio = Instantiate(audioObj, tempgo.transform.position, Quaternion.identity) as GameObject;
 				audioObj.transform.position = tempgo.transform.position;
+				audioDenominator = getDistanceTraveled();
+				Debug.LogWarning ("Volume: " + (1.0f / audioDenominator));
+				audioObj.GetComponent<AudioSource>().audio.volume = 1.0f / audioDenominator;
 				audioObj.GetComponent<AudioSource>().enabled = true;
 				Destroy(gameObject);
 			}
@@ -387,6 +389,11 @@ public class SoundRay : MonoBehaviour
 	void setDirection(int value)
 	{
 		directionTraveling = value;
+	}
+
+	public int getDistanceTraveled()
+	{
+		return previousRooms.Count - 1;
 	}
 
 }

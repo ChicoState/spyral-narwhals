@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previousRooms: 
-  speed: 10
+  speed: 1
   rayDistance: 1
   raySpawn: .25
   rayCastSpawn: .5
